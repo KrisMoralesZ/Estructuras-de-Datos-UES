@@ -4,6 +4,7 @@ package implementacioncola;
 
 public class COLA {
     Object[] ArregloCola;
+    int InicioCola = -1;
     int FinCola = -1;
     int tamaño = 0;
     int capacidadMaxima = 0;
@@ -13,7 +14,8 @@ public class COLA {
         ArregloCola = new Object[capacidad];
         capacidadMaxima = capacidad;
     }
-   //Método para insertar elementos en la Cola
+
+    // Metodo para insertar elementos en la Cola
     public void Encolar(Object valor) {
         if (tamaño == capacidadMaxima) {
             System.out.println("PILA LLENA");
@@ -23,14 +25,22 @@ public class COLA {
             tamaño++;
         }
     }
-      //Método para saber si una Cola esta vacía.
-      public boolean vacia(){
-       return tamaño==0;
-       } 
+
+    // Metodo para saber si una Cola esta vacía.
+    public boolean vacia(){
+        return tamaño==0;
+    }
       
-      //Desarrollar Método para retirar un elemento de la Cola
+    // Desarrollar Metodo para retirar un elemento de la Cola
+    public void Eliminar() {
+        InicioCola--;
+        FinCola--;
+        tamaño--;
+    }
       
-      //Desarrollar Método para obtener el tamaño de la Cola
-      
+    //Desarrollar Metodo para obtener el tamaño de la Cola
+    public int getTamaño() {
+        return tamaño;
+    }
      
 }
