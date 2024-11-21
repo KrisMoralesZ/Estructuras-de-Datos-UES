@@ -29,6 +29,20 @@ public class ListaDoblementeEnlazadaSimple {
         }
         Tamaño++;
     }
+
+    // Desarrollar Método para insertar elementos al inicio de la lista.
+    public void InsertarInicio(Object valor) {
+        Nodo nuevo = new Nodo(valor);
+        if (Tamaño==0) {
+            Primero = nuevo;
+        } else {
+            nuevo.Siguiente = Primero;
+            Primero.Anterior = nuevo;
+            Primero = nuevo;
+        }
+        Tamaño++;
+    }
+
     //Método para obtener los valores de la lista.
     public String MostrarLista() {
         String Datos = "";
@@ -77,10 +91,27 @@ public class ListaDoblementeEnlazadaSimple {
 
     }
     
-    // Desarrollar Método para insertar elementos al inicio de la lista.
-    
     // Desarrollar Método para eliminar elemento inicial de la lista.
-    
+    public void EliminarInicio() {
+        if (Primero == null) {
+           return;
+        }
+        if (Primero.Siguiente == null) {
+            Primero = null;
+        } else {
+            Primero = Primero.Siguiente;
+            Primero.Anterior = null;
+        }
+        Tamaño--;
+    }
+
     // Desarrollar Método para saber si una lista está vacía (Deberá regresar true o false)
+    public boolean ComprobarVacia() {
+        if(Tamaño == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     
 }
