@@ -16,6 +16,7 @@ public class ArbolesBinarios {
      */
     public static void main(String[] args) {
         Arbol miArbol = new Arbol();
+
         miArbol.InsertarNodo(8);
         miArbol.InsertarNodo(7);
         miArbol.InsertarNodo(14);
@@ -25,6 +26,10 @@ public class ArbolesBinarios {
 
 
         System.out.println("Esta en el arbol el 8? " + miArbol.BuscarNodo(8));
+
+        miArbol.MostrarInorden();
+        miArbol.MostrarPostorden();
+        miArbol.MostrarPreorden();
     }
     
 }

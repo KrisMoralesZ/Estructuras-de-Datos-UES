@@ -52,6 +52,7 @@ public class Arbol {
             }
         }
     }
+
      // Método para buscar elementos en un árbol.
      public boolean BuscarNodo(int datoAbuscar) {
         Nodo recorrer = raiz;
@@ -80,12 +81,52 @@ public class Arbol {
         return encontrado;
 
     }
-    
-     
+
      // Desarrollar recorrido Inorden.
+    public void inOrden(Nodo nodo) {
+        if (nodo != null) {
+            inOrden(nodo.HijoIzquierdo);
+            System.out.println(nodo.Info);
+            inOrden(nodo.HijoDerecho);
+        }
+    }
      
      // Desarrollar recorrido Preorden.
+    public void preOrden(Nodo nodo) {
+        if (nodo != null) {
+            System.out.println(nodo.Info);
+            preOrden(nodo.HijoIzquierdo);
+            preOrden(nodo.HijoDerecho);
+        }
+    }
      
      // Desarrollar recorrido Postorden.
-     
+    public void postOrden(Nodo nodo) {
+        if (nodo != null) {
+            postOrden(nodo.HijoIzquierdo);
+            postOrden(nodo.HijoDerecho);
+            System.out.println(nodo.Info);
+        }
+    }
+
+    // Método público para recorrer Inorden
+    public void MostrarInorden() {
+        System.out.println("Recorrido Inorden:");
+        inOrden(raiz);
+        System.out.println();
+    }
+
+    // Método público para recorrer Preorden
+    public void MostrarPreorden() {
+        System.out.println("Recorrido Preorden:");
+        preOrden(raiz);
+        System.out.println();
+    }
+
+    // Método público para recorrer Postorden
+    public void MostrarPostorden() {
+        System.out.println("Recorrido Postorden:");
+        postOrden(raiz);
+        System.out.println();
+    }
 }
