@@ -1,13 +1,17 @@
 import java.util.Arrays;
 
 public class OrdenacionBurbuja {
-    public static void main(String[] args) {
-        int[] array = {8, 4, 6, 2 };
+    public final void ordenarBurbuja() {
+        int[] array = Main.generateRandomArray(1000);
 
         System.out.println("Array original: \n" + Arrays.toString(array));
 
+        long startTime = System.nanoTime();
         bubbleSort(array);
+        long endTime = System.nanoTime();
+
         System.out.println("Array ordenado: \n" + Arrays.toString(array));
+        System.out.println("Tiempo de ejecuccion: " + ((endTime - startTime) / 1000000) + " ms");
     }
 
     public static void bubbleSort(int[] array) {
