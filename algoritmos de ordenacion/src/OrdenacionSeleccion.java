@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class OrdenacionSeleccion {
     public final void ordenarSeleccion() {
-        int[] array = Main.generateRandomArray(1000);
+        int[] array = Main.generateRandomArray(Main.totalNumbers());
 
         System.out.println("Array original: \n" + Arrays.toString(array));
 

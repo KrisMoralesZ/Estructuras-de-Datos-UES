@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class OrdenacionBurbuja {
     public final void ordenarBurbuja() {
-        int[] array = Main.generateRandomArray(1000);
+        int[] array = Main.generateRandomArray(Main.totalNumbers());
 
         System.out.println("Array original: \n" + Arrays.toString(array));
 

@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class OrdenacionShell {
     public final void ordenarShell() {
-        int[] array = Main.generateRandomArray(10000);
+        int[] array = Main.generateRandomArray(Main.totalNumbers());
 
         System.out.println("Array original: \n" + Arrays.toString(array));
 
