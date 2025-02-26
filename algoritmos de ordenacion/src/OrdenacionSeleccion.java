@@ -1,9 +1,8 @@
 import java.util.Arrays;
-import java.util.Random;
 
 public class OrdenacionSeleccion {
-    public static void main(String[] args) {
-        int[] array = generateRandomArray(1000);
+    public final void ordenarSeleccion() {
+        int[] array = Main.generateRandomArray(Main.totalNumbers());
 
         System.out.println("Array original: \n" + Arrays.toString(array));
 
@@ -13,15 +12,6 @@ public class OrdenacionSeleccion {
 
         System.out.println("Array ordenado: \n" + Arrays.toString(array));
         System.out.println("Tiempo de Ejecucion: " + (endTime - startTime) / 1000000 + " ms");
-    }
-
-    public static int[] generateRandomArray(int n){
-        Random random = new Random();
-        int[] array = new int[n];
-        for (int i = 0; i < n; i++) {
-            array[i] = random.nextInt(10000);
-        }
-        return array;
     }
 
     public static void sortArray(int[] array){
